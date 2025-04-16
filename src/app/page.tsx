@@ -1,103 +1,148 @@
+import TopBar from "@/Components/TopBar";
+import Link from "next/link"
+import bgImage from "@/assets/bg-smartHome2.jpg"
 import Image from "next/image";
+import light from "@/assets/light.png"
+import acunit from "@/assets/air-conditioner.png"
+import camera from "@/assets/cctv-camera.png"
+import protect from "@/assets/protect.png"
+import curtain from "@/assets/smart-curtain.png"
+import smartdoor from "@/assets/smart-door.png"
+import sound from "@/assets/sound-waves.png"
+import tree from "@/assets/sprinkler.png"
+import voice from "@/assets/voice-assistant.png"
+import NavBar from "@/Components/NavBar";
+import Brand from "@/Components/Brand";
 
+// </head>
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="bg-white text-gray-800 font-sans">
+      <TopBar />
+      <NavBar />
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={bgImage}
+            alt="Hero Background"
+            className="w-full h-full object-cover object-center scale-105"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', transform: 'scale(1.05)' }}
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className="relative z-10 px-4 max-w-3xl">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4">QT Smart Home</h1>
+          <p className="text-lg md:text-xl mb-6 max-w-2xl">Cung cấp các giải pháp công nghệ tạo ra không gian sống hiện đại <br/> tiện nghi hoàn hảo.</p>
+          <Link href="/contact" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Liên hệ ngay</Link>
+        </div>
+      </section>
+
+      {/* Dịch vụ chính */}
+      <section className="py-16 px-6 bg-white text-center">
+        <h2 className="text-3xl font-semibold mb-10">Giải pháp nhà thông minh</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {/* Smart Lighting */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image src={light} alt="Smart lighting" width={64} height={64} className="w-16 h-16" />
+            </div>
+            <p className="text-center">Điều khiển chiếu sáng thông minh</p>
+          </div>
+
+          {/* Smart AC and TV */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image src={acunit} alt="Smart AC and TV" width={64} height={64} className="w-16 h-16" />
+            </div>
+            <p className="text-center">Điều khiển điều hòa – TV thông minh</p>
+          </div>
+
+          {/* Smart Curtains */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image src={curtain} alt="Smart curtains" width={64} height={64} className="w-16 h-16" />
+            </div>
+            <p className="text-center">Rèm tự động thông minh</p>
+          </div>
+
+          {/* Security Solutions */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
+                <Image src={protect} alt="Security solutions" width={40} height={40} className="w-10 h-10" />
+              </div>
+            </div>
+            <p className="text-center">Giải pháp an ninh bảo trộm</p>
+          </div>
+
+          {/* Audio Entertainment */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image
+                src={sound}
+                alt="Audio entertainment"
+                width={64}
+                height={64}
+                className="w-16 h-16"
+              />
+            </div>
+            <p className="text-center">Âm thanh giải trí</p>
+          </div>
+
+          {/* Camera Solutions */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image src={camera} alt="Camera solutions" width={64} height={64} className="w-16 h-16" />
+            </div>
+            <p className="text-center">Giải pháp Camera</p>
+          </div>
+
+          {/* Smart Watering */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image src={tree} alt="Smart watering" width={64} height={64} className="w-16 h-16" />
+            </div>
+            <p className="text-center">Tưới cây thông minh</p>
+          </div>
+
+          {/* Smart Door Locks */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image src={smartdoor} alt="Smart door locks" width={64} height={64} className="w-16 h-16" />
+            </div>
+            <p className="text-center">Khóa cửa thông minh</p>
+          </div>
+
+          {/* Voice Control */}
+          <div className="flex flex-col items-center">
+            <div className="w-32 h-32 bg-gray-200 rounded-full flex items-center justify-center mb-4">
+              <Image src={voice} alt="Voice control" width={64} height={64} className="w-16 h-16" />
+            </div>
+            <p className="text-center">Điều khiển giọng nói màn hình</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Logo hãng đối tác */}
+      <Brand/>
+
+      {/* Form liên hệ */}
+      <section id="contact" className="py-16 px-6 bg-gray-100">
+        <h2 className="text-3xl font-semibold text-center mb-8">Liên hệ với chúng tôi</h2>
+        <form name="contact" method="POST" data-netlify="true" className="max-w-xl mx-auto space-y-4">
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="text" name="name" placeholder="Tên của bạn" required className="w-full p-3 border rounded-lg shadow-sm" />
+          <input type="text" name="telephone" placeholder="Số điện thoại" required className="w-full p-3 border rounded-lg shadow-sm" />
+          <input type="email" name="email" placeholder="Email" required className="w-full p-3 border rounded-lg shadow-sm" />
+          <textarea name="message" placeholder="Nội dung" required className="w-full p-3 border rounded-lg shadow-sm h-32"></textarea>
+          <button type="submit" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Gửi</button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="text-center py-6 text-sm text-gray-500">
+        © 2025 QT Smart Home. All rights reserved.
       </footer>
     </div>
-  );
+  )
 }
