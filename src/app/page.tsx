@@ -1,6 +1,6 @@
 import TopBar from "@/Components/TopBar";
 import Link from "next/link"
-import bgImage from "@/assets/bg-smartHome.jpg"
+import bgImage from "@/assets/bg-smart-home.jpg"
 import Image from "next/image";
 import light from "@/assets/light.png"
 import acunit from "@/assets/air-conditioner.png"
