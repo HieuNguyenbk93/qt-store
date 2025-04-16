@@ -10,7 +10,6 @@ export default function Contact() {
       <section id="contact" className="py-16 px-6 bg-gray-100">
         <h2 className="text-3xl font-semibold text-center mb-8">Liên hệ với chúng tôi</h2>
         <form name="contact" method="POST" data-netlify="true" className="max-w-xl mx-auto space-y-4">
-          <input type="hidden" name="form-name" value="contact" />
           <input type="text" name="name" placeholder="Tên của bạn" required className="w-full p-3 border rounded-lg shadow-sm" />
           <input type="text" name="telephone" placeholder="Số điện thoại" required className="w-full p-3 border rounded-lg shadow-sm" />
           <input type="email" name="email" placeholder="Email" required className="w-full p-3 border rounded-lg shadow-sm" />
