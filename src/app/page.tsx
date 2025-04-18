@@ -13,6 +13,8 @@ import tree from "@/assets/sprinkler.png"
 import voice from "@/assets/voice-assistant.png"
 import NavBar from "@/Components/NavBar";
 import Brand from "@/Components/Brand";
+import FormContactNetlify from "@/Components/FormContactNetlify";
+import Footer from "@/Components/Footer";
 
 // </head>
 export default function Home() {
@@ -127,7 +129,7 @@ export default function Home() {
       <Brand/>
 
       {/* Form liên hệ */}
-      <section id="contact" className="py-16 px-6 bg-gray-100">
+      {/* <section id="contact" className="py-16 px-6 bg-gray-100">
         <h2 className="text-3xl font-semibold text-center mb-8">Liên hệ với chúng tôi</h2>
         <form name="contact" method="POST" data-netlify="true" className="max-w-xl mx-auto space-y-4">
           <input type="text" name="name" placeholder="Tên của bạn" required className="w-full p-3 border rounded-lg shadow-sm" />
@@ -136,12 +138,11 @@ export default function Home() {
           <textarea name="message" placeholder="Nội dung" required className="w-full p-3 border rounded-lg shadow-sm h-32"></textarea>
           <button type="submit" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">Gửi</button>
         </form>
-      </section>
+      </section> */}
+      <FormContactNetlify />
 
       {/* Footer */}
-      <footer className="text-center py-6 text-sm text-gray-500">
-        © 2025 QT Smart Home. All rights reserved.
-      </footer>
+      <Footer/>
     </div>
   )
 }

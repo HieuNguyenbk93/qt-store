@@ -23,9 +23,24 @@ const NavBar = () => {
   };
 
   const menuItems: MenuItem[] = [
-    { label: "Sản phẩm & Dịch vụ", key: 'service', icon: <ProductOutlined style={{ fontSize: '20px'}} /> },
+    { label: "Sản phẩm & Dịch vụ", key: 'service', icon: <ProductOutlined style={{ fontSize: '20px'}} />,
+      children: [
+        {label: "Tuya Ziviz", key: 'product/ziviz' },
+        {label: "ACIS", key: 'product/acis' }
+      ]
+     },
+    { label: "Báo giá", key: 'bao-gia', icon: <ProductOutlined style={{ fontSize: '20px'}} /> },
     { label: "Liên hệ", key: 'contact', icon: <SolutionOutlined style={{ fontSize: '20px'}}/> }
   ]
+
+  // const menuItemsTrees: MenuProps['items'] = [ProductOutlined, LaptopOutlined, SolutionOutlined].map(
+  //   (icon, index) => {
+  //     const key = String(index+1);
+  //     return {
+  //       key:
+  //     }
+  //   }
+  // )
 
   return (
     <div className="w-full max-w-full overflow-hidden py-3 top-0 z-50" style={{backgroundColor: 'lightgrey'}}>
